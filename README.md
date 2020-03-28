@@ -1,2 +1,1 @@
 # mathway
-# mathway
