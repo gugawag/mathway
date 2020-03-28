@@ -1,0 +1,4 @@
+git add README.md 
+git commit -m "primeiro commit" 
+git remote add origin https://github.com/gugawag/mathway.git
+ git push -u origin master
