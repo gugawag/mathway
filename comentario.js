@@ -12,3 +12,4 @@ comentario.onclick = function(){
         escrever.value = " ";
     }
 }
+//jjjjjhhhgggfdfghjk
