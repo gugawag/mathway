@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #pont{
+            color: red;
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input type="number" id="nada"><button id="teste"> enviar </button>
+    <button id="rese"> próximo </button>
+    <ul id="raking">
+    </ul>
+    <p id="nada2"></p>
+  
+    <script>
+        var li;
+        let posicao = 0
+        let rakin = [];
+        let ranking;
+        let nd;
+        let li2;
+        let valor;
+        let enviar = document.getElementById("teste");
+        let rese = document.getElementById("rese");
+        nd = document.getElementById("nada").value;
+        enviar.onclick = function(){  
+            nd = document.getElementById("nada").value;         
+            rakin.push(nd)
+            rakin.sort(function (a, b) {
+                return b - a;
+            });
+            for (let i = 0; i <= rakin.length - 1; i++) {
+                li = document.createElement("li");
+                li.innerHTML = rakin[i];
+                raking = document.getElementById("raking")
+                raking.append(li);
+                document.getElementById("nada").value = "";
+                li.setAttribute("id","pont");  
+            }
+        }
+
+           /* li =  document.createElement("li");
+            li.innerHTML = rakin[posicao];
+            raking = document.getElementById("raking")
+            raking.append(li);
+            document.getElementById("nada").value = " ";
+            li.setAttribute("id","pont");
+            valor = document.querySelectorAll("#pont");
+            for(let i = 0; i <= valor.length -1; i++){
+                if(valor[i].textContent >= valor[i-1].textContent || valor[i].textContent >= valor[i +1].textContent){
+                    console.log(valor);
+                }
+                
+            }
+            */
+
+            
+            
+        
+            
+    
+  
+
+
+
+        /*
+                (UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos:
+                i) Tanto o destinatário quanto o remetente possuem uma matriz chave C;
+                ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada;
+                iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z; 
+                iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; v) o número zero corresponde ao ponto de exclamação; 
+                vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue:m11 m12 m13 m21 m22 m23 m31 m32 m33. Considere as matrizes: C =      e P = .
+                 Com base nos  conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M. 
+                 Boasorte! Certa
+                    Boaprova!
+ Boatarde!
+ Ajudeme! 
+ Socorro!
+              
+*/
+    </script>
+</body>
+
+</html>
