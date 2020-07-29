@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #pontuacao9 {
+            height: 20px;
+            display: inline-block;
+            margin: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            height: 30px;
+            font-size: 140%;
+        }
+        #pontuacao10 {
+            height: 20px;
+            display: inline-block;
+            margin: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            height: 30px;
+            font-size: 140%;
+            
+        }
+        
+
+        #corpo4 {
+            height: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <input id="nada">
+    <button id="enviar"> enviar </button>
+    <did id="corpo4">
+        <span id="pontuacao9"> </span><span id="pontuacao10"></span>
+    </div>
+
+    <script>
+        var t;
+         document.getElementById("enviar").onclick = function(){
+            t = document.getElementById("nada").value;
+            function mostrar(a){
+            let pont2 = document.getElementById("pontuacao9");
+            let pont3 = document.getElementById("pontuacao10");
+            let width = 0;
+            let tempo = setInterval(frame, 20);
+            let tempo2 = setInterval(frame2, 20);
+            let width2 = 0
+            let b = 100 - a;
+            console.log(b);
+            function frame() {
+                if (width == a) {
+                    clearInterval(tempo);
+                } else {
+                    width++;
+                    pont2.style.width = width + "%";
+                    pont2.style.backgroundColor = "limegreen"
+                    pont2.innerHTML = a;
+                }
+            }
+            function frame2(){
+                if(width2 == b){
+                    clearInterval(tempo2);
+                }
+                else{
+                    width2++;
+                    pont3.style.width = width2 + "%";
+                    pont3.style.backgroundColor = "red";
+                    pont3.innerHTML = b;
+
+                }
+                if(b ===0 ){
+                    pont3.style.width = 0 + "%";
+                    pont3.innerHTML = "";  
+                }
+        }
+        }
+        mostrar(t);
+            
+        }
+        
+       
+        
+    </script>
+</body>
+
+</html>
